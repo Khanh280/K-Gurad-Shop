@@ -1,9 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "bootstrap/dist/css/bootstrap-grid.css"
 import "bootstrap/dist/js/bootstrap"
 import "../css/home.css"
+import {Link} from "react-router-dom";
 
 export default function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <div id="demo" className="carousel slide slides d-flex container" data-bs-ride="carousel"
@@ -126,19 +130,22 @@ export default function Home() {
             </div>
 
             <div className="container mt-5 mb-5">
-                <div className="col-md-12 text-center">
-                    <h3 className="sub-title-product">SẢN PHẨM NỔI BẬT</h3>
-                    {/*<hr style={{*/}
-                    {/*    boxShadow: "0px 3px 10px #ff9300",*/}
-                    {/*    borderBottom: "1px solid #ff8c00d9",*/}
-                    {/*    width: "100%",*/}
-                    {/*}}/>*/}
+                <div className="row">
+                    <div className="col-md-12 text-center d-flex">
+                        <div className="col-md-4">
+                            <hr/>
+                        </div>
+                        <h3 className=" col-md-4 sub-title-product">SẢN PHẨM NỔI BẬT </h3>
+                        <div className="col-md-4">
+                            <hr/>
+                        </div>
+                    </div>
                 </div>
                 <div className="row">
-                    <div className="col-3">
+                    <Link to="/detail" className="col-md-3 product-link">
                         <div className="card">
                             <span className="sale">Mới</span>
-                            <div className="image" style={{height: "32vh"}}>
+                            <div className="image" style={{height: "15rem"}}>
                                 <img
                                     src="https://th.bing.com/th/id/R.478e5e20fc205672a24673778a6cd38f?rik=qHdW6vedazBF7g&pid=ImgRaw&r=0"/>
                             </div>
@@ -154,8 +161,8 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-3 ">
+                    </Link>
+                    <Link to="/detail" className="col-md-3 product-link">
                         <div className="card">
                             <span className="sale">Mới</span>
                             <div className="image" style={{height: "32vh"}}>
@@ -174,8 +181,8 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-3">
+                    </Link>
+                    <Link to="/detail" className="col-md-3 product-link">
                         <div className="card">
                             <span className="sale">Mới</span>
                             <div className="image" style={{height: "32vh"}}>
@@ -194,8 +201,8 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-3">
+                    </Link>
+                    <Link to="/detail" className="col-md-3 product-link">
                         <div className="card">
                             <span className="sale">Mới</span>
                             <div className="image" style={{height: "32vh"}}>
@@ -214,21 +221,23 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                     <div className="col-md-12 d-flex justify-content-center mt-2">
                         <button id="load-more-product" className="btn btn-sm mt-2 justify-content-center"
                                 style={{backgroundColor: "#fff", border: "1px solid #F4882F"}}>Xem thêm<i
                             className="bi bi-chevron-down"></i></button>
                     </div>
                 </div>
+
                 <div className="row pt-5">
-                    <div className="col-md-12 text-center">
-                        <h3 className="sub-title-product">TRANG BỊ BẢO HỘ</h3>
-                        {/*<hr style={{*/}
-                        {/*    boxShadow: "0px 3px 10px #ff9300",*/}
-                        {/*    borderBottom: "1px solid #ff8c00d9",*/}
-                        {/*    width: "100%",*/}
-                        {/*}}/>*/}
+                    <div className="col-md-12 text-center d-flex">
+                        <div className="col-md-4">
+                            <hr/>
+                        </div>
+                        <h3 className=" col-md-4 sub-title-product">TRANG BỊ BẢO HỘ</h3>
+                        <div className="col-md-4">
+                            <hr/>
+                        </div>
                     </div>
                     <div className="col-md-12">
                         <div className="row">
@@ -237,16 +246,15 @@ export default function Home() {
                                     <img
                                         src="https://product.hstatic.net/1000325215/product/ego-camo-hong-dai-ngon_master.jpg"
                                         alt="" style={{width: "100%"}}/>
-                                <div className="guard-items-content">Title</div>
+                                    <div className="guard-items-content">Găng tay</div>
                                 </div>
-
                             </div>
                             <div className="col-md-3 guard-items">
                                 <div className="guard-items-home">
                                     <img
                                         src="https://x135shop.vn/wp-content/uploads/2020/12/125054518_1000345630475047_3941925206897407637_o-300x300.jpg"
                                         alt="" style={{height: "100%"}}/>
-                                <div className="guard-items-content">Title</div>
+                                    <div className="guard-items-content">Mũ bảo hiểm</div>
                                 </div>
 
                             </div>
@@ -255,7 +263,7 @@ export default function Home() {
                                     <img
                                         src="https://th.bing.com/th/id/R.69500be00c0cac645b18fd512865f797?rik=CUNOxbrfAhvipA&riu=http%3a%2f%2fwww.phukienphuot.com%2fuploads%2fimages%2fmedium%2fIMG_4732.JPG&ehk=adHLdlNr7BrMYvHWowVYsnROQ0mHx6aAplQpU9Veljo%3d&risl=&pid=ImgRaw&r=0"
                                         alt="" style={{height: "100%"}}/>
-                                <div className="guard-items-content">Title</div>
+                                    <div className="guard-items-content">Áo giáp</div>
                                 </div>
 
                             </div>
@@ -263,36 +271,46 @@ export default function Home() {
                                 <div className="guard-items-home">
                                     <img src="http://www.phukienphuot.com/uploads/images/medium/thung_xe_k1300r_11.JPG"
                                          alt="" style={{height: "100%"}}/>
-                                <div className="guard-items-content">Title</div>
+                                    <div className="guard-items-content">Thùng Givi</div>
                                 </div>
 
                             </div>
                         </div>
                     </div>
+
                     <div className="col-md-12">
-                        <div className="row mt-4">
+                        <div className="row mt-4 ">
                             <div className="col-md-3">
-                                <div className="guard-items-home-sub">
-                                    <i className="bi bi-shield-shaded"></i>
+                                <div className="guard-items-home-sub-first">
+                                    <div className="guard-items-home-sub-second">
+                                        <i className="bi bi-shield-shaded"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-md-3">
-                                <div className="guard-items-home-sub">
-                                    <i className="bi bi-star-half"></i>
+                                <div className="guard-items-home-sub-first">
+                                    <div className="guard-items-home-sub-second">
+                                        <i className="bi bi-star-half"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-md-3">
-                                <div className="guard-items-home-sub">
-                                    <i className="bi bi-cash-coin"></i>
+                                <div className="guard-items-home-sub-first">
+                                    <div className="guard-items-home-sub-second">
+                                        <i className="bi bi-cash-coin"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-md-3">
-                                <div className="guard-items-home-sub">
-                                    <i className="bi bi-truck"></i>
+                                <div className="guard-items-home-sub-first">
+                                    <div className="guard-items-home-sub-second">
+                                        <i className="bi bi-truck"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div className="col-md-12">
                         <div className="row mt-4">
                             <div className=" text-center col-md-3">

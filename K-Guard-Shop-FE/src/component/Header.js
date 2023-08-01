@@ -9,7 +9,7 @@ export default function Header() {
                 <img src="/anh/KGuard3.png" alt="" style={{height: "13vh", width: "13vh"}}/>
             </div>
             <div id="header-nav-option" className="col-md-10">
-                <ul>
+                <ul style={{position: "relative"}}>
                     <li>
                         <NavLink to="/"
                                  style={({isActive}) => {
@@ -32,7 +32,7 @@ export default function Header() {
                                  }}
                         >Giới thiệu</NavLink>
                     </li>
-                    <li id="nav-product">
+                    <li className="nav-product nav-sub">
                         <NavLink to="/c"
                                  style={({isActive}) => {
                                      return {
@@ -44,12 +44,14 @@ export default function Header() {
                         >Sản phẩm
                         </NavLink>
                         <ul id="sub-nav-product">
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+                            <li>Mũ FullFace</li>
+                            <li>Mũ 3/4</li>
+                            <li>Giáp bảo hộ</li>
+                            <li>Găng tay</li>
+                            <li>Giày bảo hộ</li>
                         </ul>
                     </li>
-                    <li>
+                    <li className="nav-product nav-sub">
                         <NavLink to="/d"
                                  style={({isActive}) => {
                                      return {
@@ -59,6 +61,16 @@ export default function Header() {
                                      }
                                  }}
                         >Thương hiệu</NavLink>
+                        <ul id="sub-nav-product">
+                            <li>HJC</li>
+                            <li>LS2</li>
+                            <li>KYT</li>
+                            <li>AGV</li>
+                            <li>Yohe</li>
+                            <li>ALPINESTARS</li>
+                            <li>FOX RACING</li>
+                            <li>JOE ROCKET</li>
+                        </ul>
                     </li>
                     <li>
                         <NavLink to="/e"
@@ -71,8 +83,9 @@ export default function Header() {
                                  }}
                         >Liên hệ</NavLink>
                     </li>
+
                     <li>
-                        <NavLink to="/login" className="me-5"
+                        <NavLink to="/login" className=""
                                  style={({isActive}) => {
                                      return {
                                          backgroundColor: isActive ? "#F4882F" : "   ",
@@ -83,6 +96,20 @@ export default function Header() {
                         >Đăng nhập
                             <i style={{marginLeft: "0.5rem"}}
                                className="fa-regular fa-user"></i>
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/cart" className="me-5"
+                                 style={({isActive}) => {
+                                     return {
+                                         backgroundColor: isActive ? "#F4882F" : "   ",
+                                         color: isActive ? "black" : "",
+                                         borderRadius: "10px",
+                                     }
+                                 }}
+                        >
+                            <i className="bi bi-cart-dash"><sup style={{fontWeight: 600}}>2</sup></i>
                         </NavLink>
                     </li>
                 </ul>
